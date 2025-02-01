@@ -1,0 +1,107 @@
+{
+	"name": "GloopAnalytics",
+	"version": "1.0",
+	"author": [
+		"[https://github.com/jayktaylor Jayden Bailey]",
+		"..."
+	],
+	"url": "https://weirdgloop.org",
+	"descriptionmsg": "gloopanalytics-desc",
+	"license-name": "GPL-3.0-or-later",
+	"type": "specialpage",
+	"requires": {
+		"MediaWiki": ">= 1.41.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\GloopAnalytics\\": "src/"
+	},
+	"MessagesDirs": {
+		"GloopAnalytics": [
+			"i18n"
+		]
+	},
+	"SpecialPages": {
+		"Analytics": "MediaWiki\\Extension\\GloopAnalytics\\SpecialAnalytics"
+	},
+	"config_prefix": "wgGloopAnalytics",
+	"config": {
+		"GCPProjectID": {
+			"value": "runescape-wiki",
+			"description": "The project ID that is used for the BigQuery data."
+		},
+		"GCPCredentials": {
+			"value": "",
+			"description": "The credentials key file data (https://github.com/googleapis/google-cloud-php/blob/main/AUTHENTICATION.md)."
+		},
+		"MinViews": {
+			"value": 5,
+			"description": "A page must have at least this amount of views in one data point, otherwise the data point is discarded for privacy reasons."
+		},
+		"TopPagesMaxResults": {
+			"value": 500
+		},
+		"DomainOverride": {
+			"value": null,
+			"description": "Manually override the domain to use for the BigQuery requests. If this is null, the domain is inferred."
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "GloopAnalytics/resources"
+	},
+	"ResourceModules": {
+		"ext.GloopAnalytics": {
+			"es6": true,
+			"scripts": [
+				"index.js"
+			],
+			"dependencies": [
+				"ext.GloopAnalytics.lib",
+				"mediawiki.api",
+				"moment",
+				"mediawiki.widgets"
+			],
+			"messages": [
+				"gloopanalytics-page-name",
+				"gloopanalytics-page-submit"
+			]
+		},
+		"ext.GloopAnalytics.styles": {
+			"styles": [
+				"styles.less"
+			]
+		},
+		"ext.GloopAnalytics.lib": {
+			"scripts": [
+				"lib/chart.js/chart.js"
+			]
+		}
+	},
+	"ForeignResourcesDir": "resources/lib",
+	"ExtensionMessagesFiles": {
+		"GloopAnalyticsAlias": "GloopAnalytics.i18n.alias.php"
+	},
+	"ServiceWiringFiles": [
+		"src/ServiceWiring.php"
+	],
+	"AvailableRights": [
+		"gloopanalytics"
+	],
+	"GroupPermissions": {
+		"sysop": {
+			"gloopanalytics": true
+		}
+	},
+	"RestRoutes": [
+		{
+			"path": "/analytics/v0/fetch/{type}",
+			"method": "GET",
+			"class": "MediaWiki\\Extension\\GloopAnalytics\\RestApiAnalytics",
+			"services": [
+				"GloopAnalytics.AnalyticsFetcher",
+				"MainConfig"
+			]
+		}
+	],
+	"manifest_version": 2
+}

@@ -1,0 +1,16 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jayden Bailey"
+		]
+	},
+	"gloopanalytics-desc": "Provides analytics for a Weird Gloop hosted wiki",
+	"right-gloopanalytics": "View analytics",
+	"analytics": "Analytics",
+	"gloopanalytics-data-error": "There was an error fetching the analytics data. If this happens often, please [[Special:Contact|contact us]].",
+	"gloopanalytics-subtitle": "Viewing traffic data for this wiki",
+	"gloopanalytics-page-views-30d": "Page views (last 30 days)",
+	"gloopanalytics-top-pages-30d": "Top pages (last 30 days)",
+	"gloopanalytics-page-name": "Enter a page name",
+	"gloopanalytics-page-submit": "Fetch"
+}
