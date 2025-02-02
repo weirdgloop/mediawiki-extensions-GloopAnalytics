@@ -64,6 +64,9 @@
 				"oojs-ui.styles.icons-content"
 			],
 			"messages": [
+				"gloopanalytics-export",
+				"gloopanalytics-page-empty",
+				"gloopanalytics-page-inprogress",
 				"gloopanalytics-page-name",
 				"gloopanalytics-page-submit"
 			]

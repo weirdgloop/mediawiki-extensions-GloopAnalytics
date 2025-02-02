@@ -6,11 +6,18 @@
 	},
 	"gloopanalytics-desc": "为Weird Gloop托管的wiki提供分析",
 	"right-gloopanalytics": "查看分析",
+	"action-gloopanalytics": "查看分析",
 	"analytics": "分析",
 	"gloopanalytics-data-error": "获取分析数据时出错。若频繁发生，请[[Special:Contact|联系我们]]。",
 	"gloopanalytics-subtitle": "查看此wiki的流量数据",
-	"gloopanalytics-page-views-30d": "页面浏览量（最近30天）",
-	"gloopanalytics-top-pages-30d": "浏览量最多的页面（最近30天）",
+	"gloopanalytics-page-views": "所有页面的浏览量（最近30天）",
+	"gloopanalytics-page-views-specific": "特定页面的浏览量（最近30天）",
+	"gloopanalytics-top-pages": "浏览量最多的页面（最近30天）",
+	"gloopanalytics-top-pages-path": "路径",
+	"gloopanalytics-top-pages-requests": "请求数",
 	"gloopanalytics-page-name": "输入页面名称",
-	"gloopanalytics-page-submit": "获取"
+	"gloopanalytics-page-submit": "获取",
+	"gloopanalytics-page-inprogress": "获取中...",
+	"gloopanalytics-page-empty": "无数据。",
+	"gloopanalytics-export": "导出"
 }
