@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"LucasGameszYT"
+		]
+	},
+	"gloopanalytics-desc": "Fornece estatísticas de uma wiki hospedada pela Weird Gloop",
+	"right-gloopanalytics": "Ver estatísticas",
+	"action-gloopanalytics": "ver estatísticas",
+	"analytics": "Estatísticas",
+	"gloopanalytics-data-error": "Ocorreu um erro ao buscar os dados estatísticos. Se isso acontecer com frequência, [[Special:Contact|entre em contato conosco]].",
+	"gloopanalytics-subtitle": "Exibição dos dados de tráfego desta wiki",
+	"gloopanalytics-page-views": "Visualizações totais (nos últimos 30 dias)",
+	"gloopanalytics-page-views-specific": "Visualizações de uma página específica (nos últimos 30 dias)",
+	"gloopanalytics-top-pages": "Páginas mais visitadas (nos últimos 30 dias)",
+	"gloopanalytics-top-pages-path": "Caminho",
+	"gloopanalytics-top-pages-requests": "Solicitações",
+	"gloopanalytics-page-name": "Insira o nome de uma página",
+	"gloopanalytics-page-submit": "Buscar",
+	"gloopanalytics-page-inprogress": "Buscando...",
+	"gloopanalytics-page-empty": "Não há dados.",
+	"gloopanalytics-export": "Exportar",
+	"gloopanalytics-views": "Visualizações"
+}
