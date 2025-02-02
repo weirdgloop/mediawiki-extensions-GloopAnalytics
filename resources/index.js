@@ -95,7 +95,7 @@ var moment = require( 'moment' );
 					labels: pageViewsData.map(row => moment( row.Day ).format( 'D MMMM' )),
 					datasets: [
 						{
-							label: 'Views',
+							label: OO.ui.msg( 'gloopanalytics-views' ),
 							data: pageViewsData.map(row => row.Requests),
 							fill: true
 						}
@@ -161,7 +161,7 @@ var moment = require( 'moment' );
 							labels: data.map(row => moment( row.Day ).format( 'D MMMM' )),
 							datasets: [
 								{
-									label: 'Views',
+									label: OO.ui.msg( 'gloopanalytics-views' ),
 									data: data.map(row => row.Requests),
 									fill: true
 								}

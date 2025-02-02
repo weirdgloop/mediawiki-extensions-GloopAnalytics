@@ -19,5 +19,6 @@
 	"gloopanalytics-page-submit": "获取",
 	"gloopanalytics-page-inprogress": "获取中...",
 	"gloopanalytics-page-empty": "无数据。",
-	"gloopanalytics-export": "导出"
+	"gloopanalytics-export": "导出",
+	"gloopanalytics-views": "浏览量"
 }

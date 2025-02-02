@@ -19,5 +19,6 @@
 	"gloopanalytics-page-submit": "Fetch",
 	"gloopanalytics-page-inprogress": "Fetching...",
 	"gloopanalytics-page-empty": "No data.",
-	"gloopanalytics-export": "Export"
+	"gloopanalytics-export": "Export",
+	"gloopanalytics-views": "Views"
 }
