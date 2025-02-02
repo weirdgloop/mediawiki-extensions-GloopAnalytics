@@ -55,10 +55,10 @@ class AnalyticsFetcher {
 	public function pageViews30dSql( ?string $domain = null, ?string $page = null ) {
 		$project = $this->config->get( 'GloopAnalyticsGCPProjectID' );
 		$domain = $domain ?? $this->domain;
-		$start = $this->bq->timestamp((new \DateTime())->sub(new \DateInterval( 'P30D' )));
+		$start = $this->bq->timestamp( ( new \DateTime() )->sub( new \DateInterval( 'P30D' ) ) );
 
 		if ( $page ) {
-			$page = str_replace( 'wiki', 'w', $this->titleFactory->newFromText( $page )->getLocalURL() );
+			$page = urldecode( $this->titleFactory->newFromText( $page )->getLocalURL() );
 		}
 
 		return $this->bq->query(
