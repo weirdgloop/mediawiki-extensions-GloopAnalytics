@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Leo768"
+		]
+	},
+	"gloopanalytics-desc": "為Weird Gloop託管的wiki提供分析",
+	"right-gloopanalytics": "檢視分析",
+	"action-gloopanalytics": "檢視分析",
+	"analytics": "分析",
+	"gloopanalytics-data-error": "在取得分析資料時發生錯誤。若該情況持續發生，請[[Special:Contact|聯絡我們]]。",
+	"gloopanalytics-subtitle": "檢視此wiki的流量資料",
+	"gloopanalytics-page-views": "所有頁面的瀏覽量（最近30天）",
+	"gloopanalytics-page-views-specific": "特定頁面的瀏覽量（最近30天）",
+	"gloopanalytics-top-pages": "熱門頁面（最近30天）",
+	"gloopanalytics-top-pages-path": "路徑",
+	"gloopanalytics-top-pages-requests": "請求數",
+	"gloopanalytics-page-name": "輸入頁面名稱",
+	"gloopanalytics-page-submit": "取得",
+	"gloopanalytics-page-inprogress": "正在取得…",
+	"gloopanalytics-page-empty": "無資料。",
+	"gloopanalytics-export": "匯出",
+	"gloopanalytics-views": "瀏覽量"
+}
