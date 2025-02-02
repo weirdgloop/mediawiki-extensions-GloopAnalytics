@@ -1,20 +1,38 @@
 .gloopanalytics-data {
 	display: flex;
 	gap: 2em;
+	flex-wrap: wrap;
+
+	h3 {
+		padding: 0;
+	}
 }
 
 #gloopanalytics-page-views {
 	display: flex;
 	flex-direction: column;
 	gap: 2em;
+	flex-basis: 500px;
+	flex-shrink: 1;
 }
 
 .gloopanalytics-chart {
 	margin-top: 0.5em;
-	width: 500px;
-	height: 250px;
+	max-width: 500px;
+	max-height: 250px;
 }
 
 #gloopanalytics-page-views-form {
 	margin-top: 0.5em;
+}
+
+#gloopanalytics-top-pages {
+	overflow: auto;
+}
+
+.gloopanalytics-title-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
 }

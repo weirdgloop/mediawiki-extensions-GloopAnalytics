@@ -65,10 +65,12 @@ class RestApiAnalytics extends SimpleHandler {
 		$results = $status->getValue();
 
 		if ( $type === 'page_views_30d' ) {
-			// For privacy, remove any data points that have less than X requests
-			$results = array_filter( $results, function ( $row ) {
-				return $row['Requests'] > $this->minViews;
-			} );
+			// For privacy, set any data points that have less than X requests to 0
+			foreach ( $results as $key => $row ) {
+				if ( $row['Requests'] <= $this->minViews ) {
+					$results[$key]['Requests'] = 0;
+				}
+			}
 		}
 
 		return $results;

@@ -59,7 +59,9 @@
 				"ext.GloopAnalytics.lib",
 				"mediawiki.api",
 				"moment",
-				"mediawiki.widgets"
+				"mediawiki.widgets",
+				"oojs-ui-core",
+				"oojs-ui.styles.icons-content"
 			],
 			"messages": [
 				"gloopanalytics-page-name",

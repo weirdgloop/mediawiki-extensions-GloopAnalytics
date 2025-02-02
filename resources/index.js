@@ -4,19 +4,81 @@ var moment = require( 'moment' );
 	'use strict';
 
 	const api = new mw.Rest(),
-		pageViewsChart = $( '#gloopanalytics-page-views-all canvas' ),
-		topPagesTable = $( '#gloopanalytics-top-pages table tbody' );
+		pageViewsContainer = $( '#gloopanalytics-page-views-all' ),
+		pageViewsSingleContainer = $( '#gloopanalytics-page-views-single' ),
+		topPagesContainer = $( '#gloopanalytics-top-pages' );
 
 	const fetchData = (type, query = {}) => {
 		return api.get( `/analytics/v0/fetch/${type}`, query );
+	};
+
+	const addExportButton = ( container, chart, data ) => {
+		let items = [
+			new OO.ui.MenuOptionWidget( {
+				data: 'csv',
+				label: 'CSV'
+			} ),
+			new OO.ui.MenuOptionWidget( {
+				data: 'json',
+				label: 'JSON'
+			} )
+		];
+
+		if ( chart ) {
+			items.push(
+				new OO.ui.MenuOptionWidget( {
+					data: 'png',
+					label: 'PNG'
+				} )
+			);
+		}
+
+		const buttonMenu = new OO.ui.ButtonMenuSelectWidget( {
+			label: 'Export',
+			icon: 'download',
+			menu: {
+				items: items
+			}
+		} );
+
+		buttonMenu.getMenu().on( 'choose', function ( opt ) {
+			const type = opt.getData();
+			let a = document.createElement( 'a' );
+			switch ( type ) {
+				case 'png':
+					a.href = chart.toBase64Image();
+					a.download = `Analytics_export_${Date.now()}.png`;
+					a.click();
+					break;
+				case 'csv':
+					let csv = '';
+					for (const v of data) {
+						csv += `${Object.values(v).map((v) => `"${v}"`).join(',')}\r\n`;
+					}
+					a.href = URL.createObjectURL( new Blob( [ csv ], {
+						type: 'text/csv;charset=utf-8;'
+					} ) );
+					a.download = `Analytics_export_${Date.now()}.csv`;
+					break;
+				case 'json':
+					a.href = URL.createObjectURL( new Blob( [ JSON.stringify( data, undefined, 2 ) ], {
+						type: 'application/json'
+					} ) );
+					a.download = `Analytics_export_${Date.now()}.json`;
+					break;
+			}
+			a.click();
+		} );
+
+		container.find( '.gloopanalytics-export' ).append( buttonMenu.$element );
 	};
 
 	const setupPageViews = async () => {
 		const pageViewsData = await fetchData( 'page_views_30d' );
 
 		// Create container for page views
-		new Chart(
-			pageViewsChart,
+		const chartIns = new Chart(
+			pageViewsContainer.find( 'canvas' ),
 			{
 				type: 'line',
 				options: {
@@ -41,6 +103,8 @@ var moment = require( 'moment' );
 				}
 			}
 		);
+
+		addExportButton( pageViewsContainer, chartIns, pageViewsData );
 	};
 
 	const setupPageViewsForPage = async () => {
@@ -55,16 +119,23 @@ var moment = require( 'moment' );
 		} );
 
 		const onClick = async () => {
+			if ( submitButton.isDisabled() ) {
+				return;
+			}
+
 			const page = titleInput.getValue();
-			const container = $( '#gloopanalytics-page-views-single .gloopanalytics-chart' );
+			const container = pageViewsSingleContainer.find( '.gloopanalytics-chart' );
 			container.empty();
+			pageViewsSingleContainer.find( '.gloopanalytics-export' ).empty();
 			if ( page ) {
+				submitButton.setDisabled( true );
 				container.append( $( '<span>' ).text( 'Fetching...' ) );
 				const data = await fetchData( 'page_views_30d', { page: page } );
 				container.empty();
 
 				if ( !data.length ) {
 					container.append( $( '<span>' ).text( 'No data.' ) );
+					submitButton.setDisabled( false );
 					return;
 				}
 
@@ -72,7 +143,7 @@ var moment = require( 'moment' );
 				container.append( canvas );
 
 				// Create container for page views
-				new Chart(
+				const chartIns = new Chart(
 					canvas,
 					{
 						type: 'line',
@@ -98,9 +169,13 @@ var moment = require( 'moment' );
 						}
 					}
 				);
+
+				addExportButton( pageViewsSingleContainer, chartIns, data );
+				submitButton.setDisabled( false );
 			}
 		};
 
+		titleInput.on( 'enter', onClick );
 		submitButton.on( 'click', onClick );
 
 		$( '#gloopanalytics-page-views-form' ).append( actionField.$element );
@@ -117,11 +192,13 @@ var moment = require( 'moment' );
 
 		// Add table rows
 		for ( let row of topPagesData ) {
-			topPagesTable.append( $( '<tr>' ).append(
+			topPagesContainer.find( 'table tbody' ).append( $( '<tr>' ).append(
 				$( '<td>' ).append( $( '<a>' ).text( row['Path'] ).attr( 'href', row['Path'] ) ),
 				$( '<td>' ).text( mw.language.convertNumber( row['Views'] ) )
 			) );
 		}
+
+		addExportButton( topPagesContainer, null, topPagesData );
 	};
 
 	await Promise.all([
