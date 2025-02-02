@@ -12,7 +12,7 @@
 	"gloopanalytics-subtitle": "查看此wiki的流量数据",
 	"gloopanalytics-page-views": "所有页面的浏览量（最近30天）",
 	"gloopanalytics-page-views-specific": "特定页面的浏览量（最近30天）",
-	"gloopanalytics-top-pages": "浏览量最多的页面（最近30天）",
+	"gloopanalytics-top-pages": "热门页面（最近30天）",
 	"gloopanalytics-top-pages-path": "路径",
 	"gloopanalytics-top-pages-requests": "请求数",
 	"gloopanalytics-page-name": "输入页面名称",
