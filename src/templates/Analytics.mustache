@@ -2,14 +2,14 @@
 	<div id="gloopanalytics-page-views">
 		<div id="gloopanalytics-page-views-all">
 			<div class="gloopanalytics-title-wrapper">
-				<h3>All page views (30d)</h3>
+				<h3>{{ page_views }}</h3>
 				<div class="gloopanalytics-export"></div>
 			</div>
 			<div class="gloopanalytics-chart"><canvas></canvas></div>
 		</div>
 		<div id="gloopanalytics-page-views-single" data-initial="{{ initial_page }}">
 			<div class="gloopanalytics-title-wrapper">
-				<h3>Page views for specific page (30d)</h3>
+				<h3>{{ page_views_specific }}</h3>
 				<div class="gloopanalytics-export"></div>
 			</div>
 			<div id="gloopanalytics-page-views-form"></div>
@@ -18,14 +18,14 @@
 	</div>
 	<div id="gloopanalytics-top-pages">
 		<div class="gloopanalytics-title-wrapper">
-			<h3>Top pages (30d)</h3>
+			<h3>{{ top_pages }}</h3>
 			<div class="gloopanalytics-export"></div>
 		</div>
 		<table class="wikitable">
 			<thead>
 				<tr>
-					<th>Path</th>
-					<th>Requests</th>
+					<th>{{ top_pages_path }}</th>
+					<th>{{ top_pages_requests }}</th>
 				</tr>
 			</thead>
 			<tbody></tbody>

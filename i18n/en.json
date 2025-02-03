@@ -6,11 +6,19 @@
 	},
 	"gloopanalytics-desc": "Provides analytics for a Weird Gloop hosted wiki",
 	"right-gloopanalytics": "View analytics",
+	"action-gloopanalytics": "view analytics",
 	"analytics": "Analytics",
 	"gloopanalytics-data-error": "There was an error fetching the analytics data. If this happens often, please [[Special:Contact|contact us]].",
 	"gloopanalytics-subtitle": "Viewing traffic data for this wiki",
-	"gloopanalytics-page-views-30d": "Page views (last 30 days)",
-	"gloopanalytics-top-pages-30d": "Top pages (last 30 days)",
+	"gloopanalytics-page-views": "Page views for all pages (last 30 days)",
+	"gloopanalytics-page-views-specific": "Page views for specific page (last 30 days)",
+	"gloopanalytics-top-pages": "Top pages (last 30 days)",
+	"gloopanalytics-top-pages-path": "Path",
+	"gloopanalytics-top-pages-requests": "Requests",
 	"gloopanalytics-page-name": "Enter a page name",
-	"gloopanalytics-page-submit": "Fetch"
+	"gloopanalytics-page-submit": "Fetch",
+	"gloopanalytics-page-inprogress": "Fetching...",
+	"gloopanalytics-page-empty": "No data.",
+	"gloopanalytics-export": "Export",
+	"gloopanalytics-views": "Views"
 }

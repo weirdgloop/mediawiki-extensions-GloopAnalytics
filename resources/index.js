@@ -34,7 +34,7 @@ var moment = require( 'moment' );
 		}
 
 		const buttonMenu = new OO.ui.ButtonMenuSelectWidget( {
-			label: 'Export',
+			label: OO.ui.msg( 'gloopanalytics-export' ),
 			icon: 'download',
 			menu: {
 				items: items
@@ -95,7 +95,7 @@ var moment = require( 'moment' );
 					labels: pageViewsData.map(row => moment( row.Day ).format( 'D MMMM' )),
 					datasets: [
 						{
-							label: 'Views',
+							label: OO.ui.msg( 'gloopanalytics-views' ),
 							data: pageViewsData.map(row => row.Requests),
 							fill: true
 						}
@@ -129,12 +129,12 @@ var moment = require( 'moment' );
 			pageViewsSingleContainer.find( '.gloopanalytics-export' ).empty();
 			if ( page ) {
 				submitButton.setDisabled( true );
-				container.append( $( '<span>' ).text( 'Fetching...' ) );
+				container.append( $( '<span>' ).text( OO.ui.msg( 'gloopanalytics-page-inprogress' ) ) );
 				const data = await fetchData( 'page_views_30d', { page: page } );
 				container.empty();
 
 				if ( !data.length ) {
-					container.append( $( '<span>' ).text( 'No data.' ) );
+					container.append( $( '<span>' ).text( OO.ui.msg( 'gloopanalytics-page-empty' ) ) );
 					submitButton.setDisabled( false );
 					return;
 				}
@@ -161,7 +161,7 @@ var moment = require( 'moment' );
 							labels: data.map(row => moment( row.Day ).format( 'D MMMM' )),
 							datasets: [
 								{
-									label: 'Views',
+									label: OO.ui.msg( 'gloopanalytics-views' ),
 									data: data.map(row => row.Requests),
 									fill: true
 								}
