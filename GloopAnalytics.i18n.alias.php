@@ -17,3 +17,7 @@ $specialPageAliases[ 'zh-hans' ] = [
 $specialPageAliases[ 'zh-hant' ] = [
 	'Analytics' => [ '分析' ],
 ];
+
+$specialPageAliases['ja'] = [
+	'Analytics' => [ 'アナリティクス' ],
+];
