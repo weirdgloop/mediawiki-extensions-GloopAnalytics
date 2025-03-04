@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"MetroKopUA"
+		]
+	},
+	"gloopanalytics-desc": "Надає аналітику для вікі, розміщеної на Weird Gloop",
+	"right-gloopanalytics": "Переглянути аналітику",
+	"action-gloopanalytics": "переглянути аналітику",
+	"analytics": "Аналітика",
+	"gloopanalytics-data-error": "Виникла помилка при отриманні даних аналітики. Якщо це трапляється часто, будь ласка, [[Special:Contact|зв’яжіться з нами]].",
+	"gloopanalytics-subtitle": "Перегляд даних про трафік цієї вікі",
+	"gloopanalytics-page-views": "Перегляди статей (за останні 30 днів)",
+	"gloopanalytics-page-views-specific": "Перегляди певної статті (за останні 30 днів)",
+	"gloopanalytics-top-pages": "Найвідвідуваніші статті (за останні 30 днів)",
+	"gloopanalytics-top-pages-path": "Шлях",
+	"gloopanalytics-top-pages-requests": "Запити",
+	"gloopanalytics-page-name": "Введіть назву статті",
+	"gloopanalytics-page-submit": "Отримати",
+	"gloopanalytics-page-inprogress": "Отримання даних…",
+	"gloopanalytics-page-empty": "Немає даних.",
+	"gloopanalytics-export": "Експортувати",
+	"gloopanalytics-views": "Перегляди"
+}
