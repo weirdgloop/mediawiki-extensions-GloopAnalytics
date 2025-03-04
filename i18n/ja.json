@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Müller857"
+		]
+	},
+	"gloopanalytics-desc": "Weird GloopがホストしているWikiのアナリティクスを提供します。",
+	"right-gloopanalytics": "アナリティクスを閲覧する",
+	"action-gloopanalytics": "アナリティクスを見る",
+	"analytics": "アナリティクス",
+	"gloopanalytics-data-error": "アナリティクスデータの取得中にエラーが発生しました。このエラーが頻繁に発生する場合は[[Special:Contact|こちらのフォーム]]よりお知らせください。",
+	"gloopanalytics-subtitle": "このWikiのトラフィックデータを閲覧",
+	"gloopanalytics-page-views": "全ページの総閲覧数（直近30日）",
+	"gloopanalytics-page-views-specific": "特定のページの閲覧数（直近30日）",
+	"gloopanalytics-top-pages": "閲覧数の多いページ（直近30日）",
+	"gloopanalytics-top-pages-path": "パス",
+	"gloopanalytics-top-pages-requests": "リクエスト数",
+	"gloopanalytics-page-name": "ページ名を入力",
+	"gloopanalytics-page-submit": "取得",
+	"gloopanalytics-page-inprogress": "取得中...",
+	"gloopanalytics-page-empty": "データがありません。",
+	"gloopanalytics-export": "エクスポート",
+	"gloopanalytics-views": "閲覧数"
+}
