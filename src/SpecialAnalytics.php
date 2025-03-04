@@ -27,7 +27,12 @@ class SpecialAnalytics extends SpecialPage {
 		$html = $this->templateParser->processTemplate(
 			'Analytics',
 			[
-				'initial_page' => $par
+				'initial_page' => $par,
+				'page_views' => $this->msg( 'gloopanalytics-page-views' )->text(),
+				'page_views_specific' => $this->msg( 'gloopanalytics-page-views-specific' )->text(),
+				'top_pages' => $this->msg( 'gloopanalytics-top-pages' )->text(),
+				'top_pages_path' => $this->msg( 'gloopanalytics-top-pages-path' )->text(),
+				'top_pages_requests' => $this->msg( 'gloopanalytics-top-pages-requests' )->text(),
 			]
 		);
 		$out->addHTML( $html );
