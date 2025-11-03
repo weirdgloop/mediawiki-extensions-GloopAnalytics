@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Kingcat"
+		]
+	},
+	"gloopanalytics-desc": "Bietet Analysen für ein von Weird Gloop gehostetes Wiki",
+	"right-gloopanalytics": "Analysen anzeigen",
+	"action-gloopanalytics": "Analysen anzeigen",
+	"analytics": "Analysen",
+	"gloopanalytics-data-error": "Beim Abrufen der Analysedaten ist ein Fehler aufgetreten. Wenn dies häufiger vorkommt, wende dich bitte an [[Special:Contact|uns]]..",
+	"gloopanalytics-subtitle": "Anzeige der Besucherdaten für dieses Wiki",
+	"gloopanalytics-page-views": "Seitenaufrufe für alle Seiten (letzte 30 Tage)",
+	"gloopanalytics-page-views-specific": "Seitenaufrufe für bestimmte Seiten (letzte 30 Tage)",
+	"gloopanalytics-top-pages": "Top-Seiten (letzte 30 Tage)",
+	"gloopanalytics-top-pages-path": "Pfad",
+	"gloopanalytics-top-pages-requests": "Anfragen",
+	"gloopanalytics-page-name": "Gib einen Seitennamen ein",
+	"gloopanalytics-page-submit": "Abrufen",
+	"gloopanalytics-page-inprogress": "Wird abgerufen...",
+	"gloopanalytics-page-empty": "Keine Daten",
+	"gloopanalytics-export": "Exportieren",
+	"gloopanalytics-views": "Aufrufe"
+}
