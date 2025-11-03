@@ -2,6 +2,10 @@
 
 $specialPageAliases = [];
 
+$specialPageAliases[ 'de' ] = [
+	'Analytics' => [ 'Analysen' ],
+];
+
 $specialPageAliases[ 'en' ] = [
 	'Analytics' => [ 'Analytics' ],
 ];
