@@ -2,12 +2,12 @@
 
 $specialPageAliases = [];
 
-$specialPageAliases[ 'de' ] = [
-	'Analytics' => [ 'Analysen' ],
-];
-
 $specialPageAliases[ 'en' ] = [
 	'Analytics' => [ 'Analytics' ],
+];
+
+$specialPageAliases[ 'de' ] = [
+	'Analytics' => [ 'Analysen' ],
 ];
 
 $specialPageAliases[ 'ja' ] = [
@@ -20,6 +20,10 @@ $specialPageAliases[ 'pt' ] = [
 
 $specialPageAliases[ 'uk' ] = [
 	'Analytics' => [ 'Аналітика' ],
+];
+
+$specialPageAliases[ 'zh' ] = [
+	'Analytics' => [ 'Analytics' ],
 ];
 
 $specialPageAliases[ 'zh-hans' ] = [
