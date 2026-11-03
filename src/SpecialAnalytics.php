@@ -10,7 +10,11 @@ class SpecialAnalytics extends SpecialPage {
 	private TemplateParser $templateParser;
 
 	function __construct() {
-		parent::__construct( 'Analytics', 'gloopanalytics' );
+		if ( version_compare( MW_VERSION, '1.46', '>=' ) ) {
+			parent::__construct( 'Analytics' );
+		} else {
+			parent::__construct( 'Analytics', 'gloopanalytics' );
+		}
 		$this->templateParser = new TemplateParser( __DIR__ . '/templates' );
 	}
 
@@ -40,5 +44,10 @@ class SpecialAnalytics extends SpecialPage {
 
 	function getGroupName() {
 		return 'wiki';
+	}
+
+	/** @inheritDoc */
+	public function getRestriction(): string {
+		return 'gloopanalytics';
 	}
 }
